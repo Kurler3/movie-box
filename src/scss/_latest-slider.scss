@@ -1,0 +1,41 @@
+.latest-slider-container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    //display: flex;
+    //justify-content: center;
+
+    .latest-container {
+        height: 100vh;
+        // background-position: 'center';
+        // background-size: cover;
+        // background-repeat: no-repeat;
+
+        .latest-image {
+            height: 100%;
+            width: 100%;
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                
+                //max-height: 100%;
+            }
+        }   
+    }
+
+    .latest-text-container {
+        text-align: left;
+        padding-left: 6em; 
+        color: white;
+        margin-top: -200px;
+
+        h2 {
+            font-size:1.3rem;
+        }
+
+        .latest-text-genres-rating {
+            display: inline;
+        }
+    }
+}

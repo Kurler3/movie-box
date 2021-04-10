@@ -1,4 +1,68 @@
 .nav-bar {
     width: 100%;
-    background: red;
+    background: $background-grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+
+    h1 {
+        padding-left: 1em;
+        color: white;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        
+        .nav-bar-search-form{
+            //padding: 0.7em 0 0.7em 0;
+            background-color: white;
+            border-radius: 5rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &-input {
+                width: 80%;
+                border-top-left-radius: 5rem;
+                border-bottom-left-radius: 5rem;
+                border:none;
+                padding: 1em;
+            }
+
+            &-submit {
+                width: 20%;
+                font-size: 1.5rem;
+                padding: 0.2em 0.5em 0.2em 0.5em;
+                border-radius: 2rem;
+                margin-left: -20px;
+                border:none;
+                color: white;
+                background: $light-pink;
+                cursor: pointer;
+            }
+
+        }
+    }
+
+    
+
+    .nav-bar-list {
+        display: flex;
+        padding: 1em;
+        list-style: none;
+        align-items: center;
+        margin-top: 0.5em;
+
+        &-item {
+            padding: 0.5em;
+            margin-right: 1rem;
+            font-size: 1.7rem;
+            cursor: pointer;
+            color: white;
+        }
+    }
 }

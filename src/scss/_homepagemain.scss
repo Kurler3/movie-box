@@ -1,0 +1,9 @@
+@import './latest-slider';
+@import './movies-series-btns';
+@import './upcoming-movies-series';
+
+.main-container {
+    background:$background-purple;
+    font-family: 'Kiwi Maru', serif;
+    color: white;
+}

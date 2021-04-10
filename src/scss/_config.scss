@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+$background-grey:#262926;
+$background-black:#191A19;
+$background-purple:#301739;
+$light-pink:#EB4E7A;
+$btn-border-gradient:linear-gradient(to right, #E48207 , #6705B8);
+
+.capitalized-text {
+    text-transform: capitalize;
+}
+
+.no-text-decoration {
+    text-decoration: none;
+}

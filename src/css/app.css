@@ -1,6 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap");
+.capitalized-text {
+  text-transform: capitalize;
+}
+
+.no-text-decoration {
+  text-decoration: none;
+}
+
 .nav-bar {
   width: 100%;
-  background: red;
+  background: #262926;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15vh;
+}
+
+.nav-bar h1 {
+  padding-left: 1em;
+  color: white;
+}
+
+.nav-bar .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+}
+
+.nav-bar .form-container .nav-bar-search-form {
+  background-color: white;
+  border-radius: 5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-bar .form-container .nav-bar-search-form-input {
+  width: 80%;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  border: none;
+  padding: 1em;
+}
+
+.nav-bar .form-container .nav-bar-search-form-submit {
+  width: 20%;
+  font-size: 1.5rem;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-radius: 2rem;
+  margin-left: -20px;
+  border: none;
+  color: white;
+  background: #EB4E7A;
+  cursor: pointer;
+}
+
+.nav-bar .nav-bar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.5em;
+}
+
+.nav-bar .nav-bar-list-item {
+  padding: 0.5em;
+  margin-right: 1rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: white;
+}
+
+.latest-slider-container {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.latest-slider-container .latest-container {
+  height: 100vh;
+}
+
+.latest-slider-container .latest-container .latest-image {
+  height: 100%;
+  width: 100%;
+}
+
+.latest-slider-container .latest-container .latest-image img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.latest-slider-container .latest-text-container {
+  text-align: left;
+  padding-left: 6em;
+  color: white;
+  margin-top: -200px;
+}
+
+.latest-slider-container .latest-text-container h2 {
+  font-size: 1.3rem;
+}
+
+.latest-slider-container .latest-text-container .latest-text-genres-rating {
+  display: inline;
+}
+
+.movies-series-buttons-container {
+  margin: 0 auto;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5em 0 5em 0;
+}
+
+.movies-series-buttons-container .movies-series-btn {
+  padding: 0.7em 12em 0.7em 12em;
+  text-transform: uppercase;
+  background: transparent;
+  color: white;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.movies-series-buttons-container .movies-series-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  /*1*/
+  border: 2px solid transparent;
+  /*2*/
+  background: -webkit-gradient(linear, left top, right top, from(#E48207), to(#6705B8)) border-box;
+  background: linear-gradient(to right, #E48207, #6705B8) border-box;
+  /*3*/
+  -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff)) padding-box, -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  /*5'*/
+  mask-composite: exclude;
+  /*5*/
+}
+
+.upcoming-container {
+  margin: 0 auto;
+  width: 80%;
+  padding: 3em 0 3em 0;
+}
+
+.upcoming-container::after {
+  content: "";
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, #939393), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #939393 50%, rgba(0, 0, 0, 0) 100%);
+  display: block;
+  margin-top: 30px;
+}
+
+.upcoming-container-title {
+  text-align: start;
+  padding: 0em 40px 2em 40px;
+}
+
+.upcoming-container-title h4 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.upcoming-container .upcoming-card {
+  position: relative;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.upcoming-container .upcoming-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.upcoming-container .upcoming-card:hover {
+  z-index: 999;
+}
+
+.upcoming-container .upcoming-card:hover::after {
+  background: transparent;
+}
+
+.upcoming-container .upcoming-card-image {
+  position: relative;
+  background: blue;
+}
+
+.upcoming-container .upcoming-card-image img {
+  width: 100%;
+}
+
+.upcoming-container .upcoming-card-image-rate {
+  width: 35%;
+  position: absolute;
+  font-size: 0.8rem;
+  left: 0;
+  top: 10px;
+}
+
+.upcoming-container .upcoming-card-image-rate p {
+  padding: 0 0 0 0.3em;
+  background: green;
+}
+
+.upcoming-container .upcoming-card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 10px;
+}
+
+.upcoming-container .upcoming-card-text-title {
+  margin-top: -5px;
+  padding: 1em 0 0 0.3em;
+  font-size: 0.85rem;
+}
+
+.upcoming-container .upcoming-card-text-genres {
+  margin-top: -10px;
+  padding: 0 0 0 0.4em;
+  color: grey;
+  font-size: 0.7rem;
+}
+
+.main-container {
+  background: #301739;
+  font-family: 'Kiwi Maru', serif;
+  color: white;
 }
 
 * {
@@ -8,5 +284,9 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  background: #191A19;
 }
 /*# sourceMappingURL=app.css.map */
