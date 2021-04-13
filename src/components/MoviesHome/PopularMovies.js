@@ -3,21 +3,21 @@ import React, {useState, useEffect} from 'react'
 import ItemsCarousel from 'react-items-carousel';
 import { MovieGenresConsumer } from '../../context/MoviesGenresContext';
 import {CircleLoading} from 'react-loadingg';
-import UpcomingMovie from './UpcomingMovie';
 import LeftChevron from '../LeftChevron';
 import RightChevron from '../RightChevron';
+import PopularMovie from './PopularMovie';
 
-const UpcomingMovies = () => {
+const PopularMovies = () => {
     const [activeItemIndex, setActiveItemIndex] = useState(0);
-    const [upcomingMovies, setUpcomingMovies] = useState([]);
+    const [popularMovies, setPopularMovies] = useState([]);
     const chevronWidth = 30;
 
 
     async function getUpcoming() {
-        const rawData = await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=cfd7e9d93a8159c720cab16e6382e3eb")
+        const rawData = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=cfd7e9d93a8159c720cab16e6382e3eb")
         
         // console.log(rawData.data.results)
-        setUpcomingMovies(rawData.data.results)
+        setPopularMovies(rawData.data.results)
     }
 
     useEffect(() => {
@@ -38,10 +38,10 @@ const UpcomingMovies = () => {
                     return (
                         <div className="slider-container">
                         <div className="slider-container-title">
-                            <h4>Upcoming</h4>
+                            <h4>Popular</h4>
                         </div>
                         <div className="slider-container-slider" style={{ padding: `0 ${chevronWidth}px` }}> 
-                            {upcomingMovies!==undefined ? 
+                            {popularMovies!==undefined ? 
                             <ItemsCarousel
                             requestToChangeActive={setActiveItemIndex}
                             activeItemIndex={activeItemIndex}
@@ -55,8 +55,8 @@ const UpcomingMovies = () => {
                             disableSwipe={false}
                             >
                             
-                            {upcomingMovies.map(upcomingMovie => (<UpcomingMovie key={upcomingMovie.id} movie={upcomingMovie} genres={
-                                value.filter((genre) => genre.id===upcomingMovie.genre_ids[0])[0].name
+                            {popularMovies.map(popularMovie => (<PopularMovie key={popularMovie.id} movie={popularMovie} genres={
+                                value.filter((genre) => genre.id===popularMovie.genre_ids[0])[0].name
                             } />))}
 
                         </ItemsCarousel> : 
@@ -74,4 +74,4 @@ const UpcomingMovies = () => {
     )
 }
 
-export default UpcomingMovies
+export default PopularMovies

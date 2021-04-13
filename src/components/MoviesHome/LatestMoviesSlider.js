@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react'
 import LatestMovie from './LatestMovie'
 import axios from 'axios'
 import Loader from "react-loader-spinner";
+import {CircleLoading} from 'react-loadingg';
 import { Carousel } from 'react-responsive-carousel';
 import {MovieGenresConsumer} from '../../context/MoviesGenresContext'
 
 const LatestMoviesSlider = () => {
-    const [index, setIndex] = useState(0);
 
     const [latestMovies, setLatestMovies] = useState([]);
 
@@ -25,10 +25,6 @@ const LatestMoviesSlider = () => {
     useEffect(() => {
         getLatests();
       }, []);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
 
     return (
         <MovieGenresConsumer>
@@ -54,13 +50,9 @@ const LatestMoviesSlider = () => {
                     )
                 }else {
                     return (
-                        <Loader
-                        type="Puff"
-                        color="#00BFFF"
-                        height={100}
-                        width={100}
-                        timeout={20000} //3 secs
-                        /> 
+                        <CircleLoading
+                        color="#6702BA"
+                        size="large"/>
                     )
                 }
                 

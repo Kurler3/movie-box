@@ -1,0 +1,77 @@
+.footer {
+    padding: 90px;
+    background: $background-black;
+    color: white;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+
+    &-left-container{
+        width: 45%;
+        .footer-nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3em 0 3em 0; 
+    
+            h1 {
+                font-size: 2rem;
+                letter-spacing: 3px;
+                font-weight: 600;
+            }
+    
+            &-list {
+                display: flex;
+                list-style: none;
+                align-items: center;
+                margin-top: 1em;
+    
+                &-item {
+                    padding: 0 1em;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &-phone-number-container {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: grey;
+        }
+
+        &-copyright-container {
+            font-size: 0.9rem;
+            color: grey;
+            p{
+                padding: 0.4em 0;
+            }
+        }
+    }
+
+    &-right-container {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        img {
+            margin-bottom: 30px;
+        }
+        &-list {
+            list-style:none;
+            display: flex;
+
+
+            &-item {
+                padding: 1em;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    background: $background-grey;
+                }
+            }
+        }
+    }   
+}

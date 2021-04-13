@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faStar } from '@fortawesome/free-solid-svg-icons'
 import {Link} from 'react-router-dom'
 
-const UpcomingMovie = ({movie, genres}) => {
+const TopRatedMovie = ({movie, genres}) => {
     return (
         <Link to={`/details/movie/${movie.id}`} style={{textDecoration:'none'}}>
             <div className="home-slider-card">
@@ -22,4 +22,4 @@ const UpcomingMovie = ({movie, genres}) => {
     )
 }
 
-export default UpcomingMovie
+export default TopRatedMovie

@@ -1,14 +1,16 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
 const LatestMovie = ({movie, genre}) => {
-    return (                         
+    return (   
+        <Link to={`details/movie/${movie.id}`} style={{textDecoration:'none'}} >                  
             <div className="latest-container">
                 <div className="latest-image">
-                    <img
-                    className="d-block w-100"
-                    src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}
-                    alt={movie.title}
-                    />        
+                     <img
+                    src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                     alt={movie.title}
+                     />
+                     <div className="black-background-gradient"></div>        
                 </div>
 
                 <div className="latest-text-container">
@@ -19,6 +21,7 @@ const LatestMovie = ({movie, genre}) => {
                     </div>
                 </div>    
             </div>  
+        </Link>  
     )
 }
 

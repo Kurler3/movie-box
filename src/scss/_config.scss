@@ -13,3 +13,26 @@ $btn-border-gradient:linear-gradient(to right, #E48207 , #6705B8);
 .no-text-decoration {
     text-decoration: none;
 }
+
+.left-chevron, .right-chevron {
+    color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0 1em 0;
+    width: 20vw;
+    font-size: 2rem;
+}
+
+.left-chevron{
+    margin-left: 20px;
+}
+.right-chevron {
+    margin-right: 20px;
+}
+
+.black-background-gradient {
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}

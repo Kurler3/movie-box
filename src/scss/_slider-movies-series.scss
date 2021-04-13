@@ -1,4 +1,4 @@
-.upcoming-container {
+.slider-container {
     margin: 0 auto;
     width: 80%;
     padding: 3em 0 3em 0;
@@ -23,13 +23,16 @@
         }
     }
 
-    .upcoming-card {
-        // height: 300px;
+    .home-slider-card {
+        text-decoration: none;
+        color: white;
         position: relative;
         border-radius: 10rem;
         cursor: pointer;
         
-
+        &:focus, &:hover, &:visited, &:link, &:active {
+            text-decoration: none;
+        }
         &::after{
             content: "";
             position: absolute;
@@ -52,7 +55,6 @@
 
         &-image {
             position: relative;
-            background: blue;
             img {
                 // height: 100%;
                 width: 100%;
@@ -81,7 +83,9 @@
             &-title {
                 margin-top: -5px;
                 padding: 1em 0 0 0.3em;
+                height: 10vh;
                 font-size: 0.85rem;
+                overflow: hidden;
             }
 
             &-genres {

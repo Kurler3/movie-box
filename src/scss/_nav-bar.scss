@@ -12,12 +12,14 @@
     }
 
     .form-container {
+        
         display: flex;
         justify-content: center;
         align-items: center;
         width: 500px;
         
         .nav-bar-search-form{
+            height: 7vh;
             //padding: 0.7em 0 0.7em 0;
             background-color: white;
             border-radius: 5rem;
@@ -63,6 +65,13 @@
             font-size: 1.7rem;
             cursor: pointer;
             color: white;
+            transition: all 0.1s ease-in-out;
+            border-radius: 1.5rem;
+
+            &:hover {
+                background: $background-black;
+            }
+
         }
     }
 }

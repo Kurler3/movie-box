@@ -1,16 +1,16 @@
-import { Button } from 'bootstrap'
 import {Link} from 'react-router-dom'
 import React from 'react'
 
 const MoviesSeriesButtons = () => {
+
     return (
             <div className="movies-series-buttons-container">
-                <Link to="/" className="no-text-decoration">
+                <Link to="/" style={{textDecoration:'none'}}>
                     <div className="movies-series-btn">
                         Movies
                     </div>
                 </Link>
-                <Link to="/home/series">
+                <Link to="/home/series" style={{textDecoration:'none'}}>
                     <div className="movies-series-btn">
                         TV shows
                     </div>
