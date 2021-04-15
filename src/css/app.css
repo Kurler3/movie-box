@@ -445,6 +445,188 @@
   background: #262926;
 }
 
+.details-container {
+  background: #301739;
+}
+
+.details-container .back-arrow-container, .details-container .share-icon-container {
+  position: absolute;
+  padding: 0.8em;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  top: 25vh;
+}
+
+.details-container .back-arrow-container:hover, .details-container .share-icon-container:hover {
+  background: #191A19;
+}
+
+.details-container .back-arrow-container .back-arrow-icon, .details-container .back-arrow-container .share-icon, .details-container .share-icon-container .back-arrow-icon, .details-container .share-icon-container .share-icon {
+  color: white;
+  font-size: 2rem;
+}
+
+.details-container .back-arrow-container {
+  left: 5vw;
+}
+
+.details-container .share-icon-container {
+  right: 5vw;
+}
+
+.details-container-poster-container {
+  height: 90vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.details-container-main {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #301739;
+}
+
+.details-container-main-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.details-container-main-intro-poster {
+  padding: 1em;
+  height: 100%;
+}
+
+.details-container-main-intro-poster img {
+  height: 100%;
+}
+
+.details-container-main-intro-text {
+  padding: 0.5em;
+  color: white;
+}
+
+.details-container-main-intro-text-status-language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: grey;
+}
+
+.details-container-main-intro-text-status-language p {
+  padding: 0 0.2em 0 0.2em;
+}
+
+.details-container-main-intro-text-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.details-container-main-intro-text-genres {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: grey;
+}
+
+.details-container-main-intro-like-container {
+  padding-left: 17em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.details-container-main-intro-like-container .heart-icon {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.details-container-main-intro-like-container .heart-icon:hover {
+  color: red;
+}
+
+.details-container-main-summary {
+  color: grey;
+  padding: 0.7em;
+  font-size: 1rem;
+}
+
+.details-container-main-summary span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.details-container-main .details-cast-container {
+  padding: 1em;
+}
+
+.details-container-main .details-cast-container::after {
+  content: "";
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, #939393), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #939393 50%, rgba(0, 0, 0, 0) 100%);
+  display: block;
+  margin-top: 30px;
+}
+
+.details-container-main .details-cast-container .cast-slider-card {
+  overflow: hidden;
+  width: 10vw;
+  color: white;
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+}
+
+.details-container-main .details-cast-container .cast-slider-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.details-container-main .details-cast-container .cast-slider-card:hover {
+  z-index: 999;
+}
+
+.details-container-main .details-cast-container .cast-slider-card:hover::after {
+  background: transparent;
+}
+
+.details-container-main .details-cast-container .cast-slider-card-content {
+  text-align: center;
+}
+
+.details-container-main .details-cast-container .cast-slider-card-content img {
+  width: 100%;
+}
+
+.details-container-main .details-cast-container .cast-slider-card-content p {
+  padding-top: 0.4em;
+}
+
 * {
   margin: 0;
   padding: 0;
