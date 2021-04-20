@@ -100,7 +100,7 @@
             }
         }
         
-        .details-cast-container{
+        .details-slider-container{
             padding: 1em;
 
             &::after {
@@ -119,6 +119,7 @@
                 cursor:pointer;
                 height: 100%;
                 position: relative;
+                border-radius: 2rem;
 
                 &::after{
                     content: "";
@@ -150,7 +151,46 @@
                     }
                 }
             }
+            
+            .trailer-slider-card {
+                max-height: 100%;
+                cursor:pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
 
+        }
+
+        .details-reviews-container {
+            padding: 2em;
+            color: white;
+            .review-container {
+                background: #1D2E25;
+                border-radius: 1rem;
+                margin-top: 2em;
+                padding: 1em;
+                h4 {
+                    padding-top: 0.5em;
+                    // padding: 0.5em 1em 0.5em 1em;
+                    font-size: 1.2rem;
+                }
+                .review-content-container {
+                    padding-bottom: 0.5em;
+                    padding-top: 0.5em;
+                    color: #C3C3C3;
+                    // padding: 0 1em 0.5em 1em;
+                    // background: red;
+                    height: 20vh;
+                    overflow: hidden;
+                }
+
+                a{
+                    color: gray;
+                    text-decoration: none;
+                }
+            }
         }
         
     }

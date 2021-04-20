@@ -1,25 +1,28 @@
 import React, {useState, useEffect} from 'react'
-import LatestMovie from './LatestMovie'
+import LatestSerie from './LatestSerie'
 import axios from 'axios'
-import Loader from "react-loader-spinner";
 import {CircleLoading} from 'react-loadingg';
 import { Carousel } from 'react-responsive-carousel';
 import {GenresConsumer} from '../../context/GenresContext'
 
-const LatestMoviesSlider = () => {
+const LatestSeriesSlider = () => {
 
-    const [latestMovies, setLatestMovies] = useState([]);
+    const [latestSeries, setLatestSeries] = useState([]);
 
     async function getLatests() {
-        const rawData1 = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=cfd7e9d93a8159c720cab16e6382e3eb")
+        const rawData1 = await axios.get("https://api.themoviedb.org/3/tv/popular?api_key=cfd7e9d93a8159c720cab16e6382e3eb")
         
         const jsonData = rawData1.data.results
         
+        // console.log(jsonData);
+
         let result = []
 
         for(let i=0; i<3; i++) result.push(jsonData[i])
 
-        setLatestMovies(result)
+        console.log(result);
+        
+        setLatestSeries(result)
     }
 
     useEffect(() => {
@@ -29,20 +32,14 @@ const LatestMoviesSlider = () => {
     return (
         <GenresConsumer>
             {value => {
-                if(value!==undefined){
+                if(value.seriesGenreList!==undefined){
                     return (
                         <div className="latest-slider-container">
-                        {latestMovies===undefined ? <Loader
-                        type="Puff"
-                        color="#00BFFF"
-                        height={100}
-                        width={100}
-                        timeout={20000} //3 secs
-                        /> 
+                        {latestSeries===undefined ? <CircleLoading />
                         :
                         <Carousel autoPlay={true} interval={6000} dynamicHeight={false} infiniteLoop={true} stopOnHover={true} swipeable={true}>
-                            {latestMovies.map((latestMovie) => (<LatestMovie key={latestMovie.id} movie={latestMovie} genre={
-                                value.moviesGenreList.filter(element => element.id===latestMovie.genre_ids[0])[0].name
+                            {latestSeries.map((latestSerie) => (<LatestSerie key={latestSerie.id} series={latestSerie} genre={
+                                value.seriesGenreList.filter(element => element.id===latestSerie.genre_ids[0])[0].name
                             } />)) }
                         </Carousel>
                         } 
@@ -61,4 +58,4 @@ const LatestMoviesSlider = () => {
     );
 }
 
-export default LatestMoviesSlider
+export default LatestSeriesSlider

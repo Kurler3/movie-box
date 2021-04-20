@@ -1,7 +1,7 @@
 import React from 'react'
 import { CircleLoading } from 'react-loadingg'
 
-const MovieCastPerson = ({person}) => {
+const SeriesCastPerson = ({person}) => {
     return (
         <a href={`https://en.wikipedia.org/wiki/${person.name}`} target="_blank" style={{color:'white', textDecoration:'none'}}>
             <div className="cast-slider-card">
@@ -17,4 +17,4 @@ const MovieCastPerson = ({person}) => {
     )
 }
 
-export default MovieCastPerson
+export default SeriesCastPerson

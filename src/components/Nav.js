@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHome, faUserCircle, faCompass, faSearch } from '@fortawesome/free-solid-svg-icons'
+import {Link} from 'react-router-dom'
 
 const Nav = () => {
 
@@ -13,7 +14,9 @@ const Nav = () => {
 
     return (
         <div className="nav-bar">
-            <h1>Movie Box</h1>
+            <Link to="/" style={{textDecoration:'none'}}>
+                <h1>Movie Box</h1>
+            </Link>
             <div className="form-container">
                 <form className="nav-bar-search-form">
                     <input type="text" name="" id="" placeholder="Search..." className="nav-bar-search-form-input" value={text} 

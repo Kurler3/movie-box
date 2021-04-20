@@ -3,9 +3,9 @@ import ItemsCarousel from 'react-items-carousel';
 import {CircleLoading} from 'react-loadingg';
 import LeftChevron from '../LeftChevron';
 import RightChevron from '../RightChevron';
-import MovieCastPerson from './MovieCastPerson';
+import SeriesCastPerson from './SeriesCastPerson';
 
-const MoviesCastSlider = ({movieCast}) => {
+const SeriesCastSlider = ({serieCast}) => {
     const [activeItemIndex, setActiveItemIndex] = useState(0);
     
     const chevronWidth = 30;
@@ -13,7 +13,7 @@ const MoviesCastSlider = ({movieCast}) => {
     return (
         <div className="details-slider-container">
             <h3 style={{textTransform:"uppercase", color:"white", fontWeight:'500', padding:'0.5em', letterSpacing:'4px'}}>Cast</h3>
-            {movieCast!==undefined ? 
+            {serieCast!==undefined ? 
             <ItemsCarousel
             requestToChangeActive={setActiveItemIndex}
             activeItemIndex={activeItemIndex}
@@ -26,7 +26,7 @@ const MoviesCastSlider = ({movieCast}) => {
             infiniteLoop={true}
             disableSwipe={false}
             >
-                {movieCast.map(person => (<MovieCastPerson key={person.id} person={person}/>))}
+                {serieCast.map(person => (<SeriesCastPerson key={person.id} person={person}/>))}
             </ItemsCarousel> : 
             
             <CircleLoading />
@@ -37,4 +37,4 @@ const MoviesCastSlider = ({movieCast}) => {
     )
 }
 
-export default MoviesCastSlider
+export default SeriesCastSlider

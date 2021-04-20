@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react'
 import ItemsCarousel from 'react-items-carousel';
-import { MovieGenresConsumer } from '../../context/MoviesGenresContext';
+import { GenresConsumer } from '../../context/GenresContext';
 import {CircleLoading} from 'react-loadingg';
 import LeftChevron from '../LeftChevron';
 import RightChevron from '../RightChevron';
@@ -25,7 +25,7 @@ const PopularMovies = () => {
     }, [])
 
     return (
-        <MovieGenresConsumer>
+        <GenresConsumer>
 
             {value => {
                 if(value===undefined) {
@@ -56,7 +56,7 @@ const PopularMovies = () => {
                             >
                             
                             {popularMovies.map(popularMovie => (<PopularMovie key={popularMovie.id} movie={popularMovie} genres={
-                                value.filter((genre) => genre.id===popularMovie.genre_ids[0])[0].name
+                                value.moviesGenreList.filter((genre) => genre.id===popularMovie.genre_ids[0])[0].name
                             } />))}
 
                         </ItemsCarousel> : 
@@ -70,7 +70,7 @@ const PopularMovies = () => {
                 }
             
             }}
-        </MovieGenresConsumer>
+        </GenresConsumer>
     )
 }
 

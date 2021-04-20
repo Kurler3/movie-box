@@ -10,7 +10,7 @@ const MoviesSeriesButtons = () => {
                         Movies
                     </div>
                 </Link>
-                <Link to="/home/series" style={{textDecoration:'none'}}>
+                <Link to="/series" style={{textDecoration:'none'}}>
                     <div className="movies-series-btn">
                         TV shows
                     </div>

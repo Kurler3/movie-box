@@ -3,25 +3,25 @@ import React, {useState, useEffect} from 'react'
 import ItemsCarousel from 'react-items-carousel';
 import { GenresConsumer } from '../../context/GenresContext';
 import {CircleLoading} from 'react-loadingg';
-import UpcomingMovie from './UpcomingMovie';
+import OnTheAirSerie from './OnTheAirSerie';
 import LeftChevron from '../LeftChevron';
 import RightChevron from '../RightChevron';
 
-const UpcomingMovies = () => {
+const OnTheAirSeries = () => {
     const [activeItemIndex, setActiveItemIndex] = useState(0);
-    const [upcomingMovies, setUpcomingMovies] = useState([]);
+    const [onTheAirSeries, setOnTheAirSeries] = useState([]);
     const chevronWidth = 30;
 
 
-    async function getUpcoming() {
-        const rawData = await axios.get("https://api.themoviedb.org/3/movie/upcoming?api_key=cfd7e9d93a8159c720cab16e6382e3eb")
+    async function getOnTheAir() {
+        const rawData = await axios.get("https://api.themoviedb.org/3/tv/on_the_air?api_key=cfd7e9d93a8159c720cab16e6382e3eb")
         
         // console.log(rawData.data.results)
-        setUpcomingMovies(rawData.data.results)
+        setOnTheAirSeries(rawData.data.results)
     }
 
     useEffect(() => {
-        getUpcoming();
+        getOnTheAir();
     }, [])
 
     return (
@@ -38,10 +38,10 @@ const UpcomingMovies = () => {
                     return (
                         <div className="slider-container">
                         <div className="slider-container-title">
-                            <h4>Upcoming</h4>
+                            <h4>On The Air</h4>
                         </div>
                         <div className="slider-container-slider" style={{ padding: `0 ${chevronWidth}px` }}> 
-                            {upcomingMovies!==undefined ? 
+                            {onTheAirSeries!==undefined ? 
                             <ItemsCarousel
                             requestToChangeActive={setActiveItemIndex}
                             activeItemIndex={activeItemIndex}
@@ -55,8 +55,8 @@ const UpcomingMovies = () => {
                             disableSwipe={false}
                             >
                             
-                            {upcomingMovies.map(upcomingMovie => (<UpcomingMovie key={upcomingMovie.id} movie={upcomingMovie} genres={
-                                value.moviesGenreList.filter((genre) => genre.id===upcomingMovie.genre_ids[0])[0].name
+                            {onTheAirSeries.map(onTheAirSerie => (<OnTheAirSerie key={onTheAirSerie.id} series={onTheAirSerie} genres={
+                                value.seriesGenreList.filter((genre) => genre.id===onTheAirSerie.genre_ids[0])[0].name
                             } />))}
 
                         </ItemsCarousel> : 
@@ -74,4 +74,4 @@ const UpcomingMovies = () => {
     )
 }
 
-export default UpcomingMovies
+export default OnTheAirSeries
