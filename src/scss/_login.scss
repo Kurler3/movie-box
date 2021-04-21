@@ -1,0 +1,47 @@
+.log-in-container {
+    //height: 100vh;
+    font-family: 'Kiwi Maru', serif;
+    color: white;
+
+    &-text {
+        padding: 3rem;
+        background-color: $background-purple;
+        text-align: center;
+
+        h1 {
+            padding: 0.5em;
+        }
+    }
+
+    &-buttons {
+        height:50vh;
+        
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        &-btn {
+            width: 20%;
+            margin-top: 1em;
+            padding:1em;
+            background: $light-pink;
+            color: white;
+            border-radius: 2rem;
+            border: 2px solid $light-pink;
+            transition: $transition;
+            
+
+            &:hover {
+                background: white;
+                color: $light-pink;
+            }
+        }
+
+        p{
+            color: grey;
+            margin-top: 1em;
+        }
+    }
+}

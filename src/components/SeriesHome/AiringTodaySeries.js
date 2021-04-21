@@ -55,9 +55,11 @@ const AiringTodaySeries = () => {
                             disableSwipe={false}
                             >
                             
-                            {airingSeries.map(airingSerie => (<AiringTodaySerie key={airingSerie.id} series={airingSerie} genres={
-                                value.seriesGenreList.filter((genre) => genre.id===airingSerie.genre_ids[0])[0].name
-                            } />))}
+                            {airingSeries.map(airingSerie => { 
+                                // if(airingSerie.genre_ids.length < 1) console.log(airingSerie)
+                                return <AiringTodaySerie key={airingSerie.id} series={airingSerie} genres={
+                                    airingSerie.genre_ids.length >= 1 ? value.seriesGenreList.filter((genre) => genre.id===airingSerie.genre_ids[0])[0].name : ''
+                            } />})}
 
                         </ItemsCarousel> : 
                             <CircleLoading

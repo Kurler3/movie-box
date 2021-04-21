@@ -666,6 +666,125 @@
   text-decoration: none;
 }
 
+.log-in-container {
+  font-family: 'Kiwi Maru', serif;
+  color: white;
+}
+
+.log-in-container-text {
+  padding: 3rem;
+  background-color: #301739;
+  text-align: center;
+}
+
+.log-in-container-text h1 {
+  padding: 0.5em;
+}
+
+.log-in-container-buttons {
+  height: 50vh;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.log-in-container-buttons-btn {
+  width: 20%;
+  margin-top: 1em;
+  padding: 1em;
+  background: #EB4E7A;
+  color: white;
+  border-radius: 2rem;
+  border: 2px solid #EB4E7A;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.log-in-container-buttons-btn:hover {
+  background: white;
+  color: #EB4E7A;
+}
+
+.log-in-container-buttons p {
+  color: grey;
+  margin-top: 1em;
+}
+
+.guest-profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150vh;
+  font-family: 'Kiwi Maru', serif;
+}
+
+.guest-profile-container .guest-profile-side-bar {
+  width: 20vw;
+  background: #301739;
+  color: white;
+  text-align: center;
+}
+
+.guest-profile-container .guest-profile-side-bar-image {
+  margin: 0 auto;
+  margin-top: 8em;
+  height: 15%;
+  width: 50%;
+  border-radius: 5rem;
+  background-image: url(https://cdn.pixabay.com/photo/2017/11/08/22/28/camera-2931883_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.guest-profile-container .guest-profile-side-bar h3 {
+  margin-top: 1em;
+  font-size: 1.2rem;
+}
+
+.guest-profile-container .guest-profile-side-bar p {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.guest-profile-container .guest-profile-side-bar-log-out-btn {
+  margin-top: 2em;
+  padding: 0.7em;
+  width: 55%;
+  background: transparent;
+  border: 2px solid #EB4E7A;
+  border-radius: 2rem;
+  color: white;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.guest-profile-container .guest-profile-side-bar-log-out-btn:hover {
+  background: white;
+  color: black;
+  border-color: white;
+}
+
+.guest-profile-container .guest-profile-main {
+  width: 80%;
+  background: rgba(14, 2, 70, 0.9);
+}
+
+.guest-profile-container .guest-profile-main-top-nav {
+  height: 23vh;
+  background: #191A19;
+}
+
 * {
   margin: 0;
   padding: 0;

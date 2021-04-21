@@ -20,7 +20,7 @@ const LatestSeriesSlider = () => {
 
         for(let i=0; i<3; i++) result.push(jsonData[i])
 
-        console.log(result);
+        //console.log(result);
         
         setLatestSeries(result)
     }
@@ -38,9 +38,11 @@ const LatestSeriesSlider = () => {
                         {latestSeries===undefined ? <CircleLoading />
                         :
                         <Carousel autoPlay={true} interval={6000} dynamicHeight={false} infiniteLoop={true} stopOnHover={true} swipeable={true}>
-                            {latestSeries.map((latestSerie) => (<LatestSerie key={latestSerie.id} series={latestSerie} genre={
+                            {latestSeries.map((latestSerie) => { 
+                                // console.log(latestSerie);
+                                return <LatestSerie key={latestSerie.id} series={latestSerie} genre={
                                 value.seriesGenreList.filter(element => element.id===latestSerie.genre_ids[0])[0].name
-                            } />)) }
+                            } />}) }
                         </Carousel>
                         } 
             </div> 

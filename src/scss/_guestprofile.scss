@@ -1,0 +1,68 @@
+.guest-profile-container {
+    display: flex;
+    height: 150vh;
+    font-family: 'Kiwi Maru', serif;
+
+    .guest-profile-side-bar {
+        width: 20vw;
+        background: $background-purple;
+        color: white;
+        text-align: center;
+
+        &-image {
+            margin: 0 auto;
+            margin-top: 8em;
+            height: 15%;
+            width: 50%;
+            border-radius: 5rem;
+            background-image: url(https://cdn.pixabay.com/photo/2017/11/08/22/28/camera-2931883_1280.jpg);
+            background-size: cover;
+            background-position: center;
+            // height: 10%;
+            // width: 40%;
+            //background: red;
+            overflow: hidden;
+        }
+
+        h3 {
+            margin-top: 1em;
+            font-size: 1.2rem;
+        }
+
+        p{
+            color: grey;
+            font-size: 0.8rem;
+        }
+
+        &-log-out-btn {
+            margin-top: 2em;
+            padding: 0.7em;
+            width: 55%;
+            background: transparent;
+            border: 2px solid $light-pink;
+            border-radius: 2rem;
+            color: white;
+            transition:$transition;
+
+            &:hover {
+                background: white;
+                color: black;
+                border-color: white;
+            }
+        }    
+    }
+
+    .guest-profile-main {
+        width: 80%;
+        background: $background-profile-main;
+
+        &-top-nav {
+            height: 23vh;
+            background: $background-black;
+        }
+
+        &-body {
+
+        }
+    }
+}

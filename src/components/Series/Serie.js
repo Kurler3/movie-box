@@ -106,7 +106,7 @@ const Serie = (props) => {
                 
                 {serie.id!==undefined ? <SeriesCastSlider serieCast={serie.credits.cast}/> : <CircleLoading />} 
                 {serie.id!==undefined ? <SeriesTrailersSlider serieID={serie.id} /> : <CircleLoading />}
-                {/* {serie.id!==undefined ? <SeriesReviews serieID={serie.id} /> : <CircleLoading />} */}
+                {serie.id!==undefined ? <SeriesReviews serieID={serie.id} /> : <CircleLoading />}
             </div>
 
         </div> : 
