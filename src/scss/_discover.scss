@@ -1,0 +1,150 @@
+.discover-container {
+    background: $background-black;
+    color: white;
+    border-bottom: 2px solid $light-pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+
+    &-title {
+        padding: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-size: 1.8rem;
+    }
+
+    &-divider {
+        height: 3px;
+        width: 10%;
+        border: 1px solid white;
+    }
+
+    &-search-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        height: 170px;
+
+        &-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+    
+            &-item {
+                width: 20%;
+                height: 3rem;
+                padding: 0.5em;
+                color: white;
+                background: $light-pink;
+                border: none;
+                border-radius: 0.5rem;
+
+                &::placeholder {
+                    color: white;
+                }
+            }
+        }
+
+        &-submit {
+            border-radius: 1.2rem;
+            padding: 0.6em 6em 0.6em 6em;
+            border:2px solid white;
+            background: $background-black;
+            color: white;
+            letter-spacing: 2px;
+            transition: $transition;
+
+            &:hover {
+                background: $background-grey;
+            }
+        }
+    }
+
+    &-grid-container {
+        margin-top: 20px;
+        padding: 1em;
+        display: inline-grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 30px;
+
+        .discover-card {
+            position: relative;
+            padding: 1em;
+            width: 150px;
+            height: 240px;
+
+            &:focus, &:hover, &:visited, &:link, &:active {
+                text-decoration: none;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                transition: all 0.2s ease;
+            }
+    
+            &:hover {
+                //height: 110%;
+                z-index: 999;
+            }
+    
+            &:hover::after{
+                background: transparent;
+            }
+
+            &-image {
+                height: 70%;
+                background-size: cover;
+                background-position: center;
+            }
+
+            &-text {
+                color: white;
+                height: 30%;
+
+                &-title {
+                    height: 80%;
+                    overflow: hidden;
+                }
+                &-rate {
+                    margin-top: -10px;
+
+                    &-icon {
+                        color: $light-pink;
+                    }
+                }
+            }
+        }
+    }
+    
+    &-page-changer-container {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        padding: 1em;
+
+        &-btn {
+            width: 45%;
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+            background: $light-pink;
+            color: white;
+            transition: $transition;
+            border: none;
+            &:hover {
+                background: white;
+                color: black;
+            }
+        }
+    }
+}

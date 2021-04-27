@@ -22,7 +22,7 @@ const LogIn = (props) => {
                             Log In
                         </button>
                     
-                        <button className="log-in-container-buttons-btn" onClick={() => value.updateLoggedIn()}>
+                        <button className="log-in-container-buttons-btn" onClick={() => value.logIn()}>
                             <Link to="/profile/guest" style={{textDecoration:'none'}}>
                                 Browse as Guest
                             </Link>

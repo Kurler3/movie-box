@@ -7,7 +7,8 @@ export class AuthenticationProvider extends Component {
 
     state = {
         isLoggedIn: false,
-        updateLoggedIn: () => {this.setState((state) => ({isLoggedIn:true}))}
+        logIn: () => {this.setState((state) => ({isLoggedIn:true}))},
+        logOff: () => {this.setState((state) => ({isLoggedIn:false}))}
     }
 
     updateLoggedIn(isLogged) {

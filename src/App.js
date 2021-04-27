@@ -11,6 +11,7 @@ import ScrollToTop from './components/ScrollToTop';
 import LogIn from './components/Authentication/LogIn';
 import { AuthenticationProvider } from './context/AuthenticationContext';
 import GuestProfile from './components/Authentication/GuestProfile';
+import Discover from './components/SearchMovie/Discover';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
                   <Route exact path="/details/series/:id" component={Serie}/>
                   <Route exact path="/log-in" component={LogIn} />
                   <Route exact path="/profile/guest" component={GuestProfile} />
-                  {/* <Route exact path="/discover" component={} /> */}
+                  <Route exact path="/discover" component={Discover} />
                 </Switch>
                 <Footer />
               </div>
