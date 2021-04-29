@@ -1,0 +1,98 @@
+.search-title-container {
+    background: $background-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    
+
+    &-title, &-title-span {
+        margin-top: 50px;
+        color: white;
+        padding: 1em;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+
+        &-span {
+            color: $light-pink;
+            margin-left: -1em;
+        }
+    }
+
+    &-divider {
+        width: 10%;
+        height: 3px;
+        border: 1px solid $light-pink;
+    }
+
+    &-grid {
+        margin-top: 20px;
+        padding: 1em;
+        display: inline-grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 40px;
+        
+        .search-title-movie-container {
+            position: relative;
+            width: 150px;
+            height: 320px;
+            transition: all 0.3s ease-in-out;
+
+            &:focus, &:hover, &:visited, &:link, &:active {
+                text-decoration: none;
+            }
+
+            &:hover {
+                height: 340px;
+                width: 170px;
+            }
+
+            &-image {
+                height: 70%;
+                background-size: cover;
+                background-position: center;
+                border-radius: 1rem;
+            }
+
+            &-text{
+                height: 30%;
+                padding-top: 0.3em;
+                color: white;
+
+                &-title {
+                    font-weight: 700;
+                    margin-top: 1em;
+                }
+
+                &-genres{
+                    color: gray;
+                }
+            }
+        }
+        
+    }
+
+    &-page-changer-container{
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        width: 30%;
+        padding: 1em;
+
+        &-btn {
+            width: 45%;
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
+            background: $light-pink;
+            color: white;
+            transition: $transition;
+            border: none;
+            &:hover {
+                background: white;
+                color: black;
+            }
+        }
+    }
+}

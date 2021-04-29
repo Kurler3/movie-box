@@ -30,6 +30,12 @@
                 &-item {
                     padding: 0 1em;
                     cursor: pointer;
+                    transition: all 0.1s ease-in-out;
+                    padding: 1em;
+
+                    &:hover{
+                        background: $background-grey;
+                    }
                 }
             }
         }

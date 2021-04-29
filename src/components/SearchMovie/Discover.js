@@ -55,7 +55,7 @@ const Discover = () => {
     async function getDiscoverMovies() {
         setLoading(true);
 
-        const rawData = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=cfd7e9d93a8159c720cab16e6382e3eb&sort_by=${sortBy}${voteAvg!==0 ? `&vote_count.gte=${voteAvg}` : ''}${year!==0 ? `&year=${year}` : ''}&page=${currentPage}`)
+        const rawData = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=cfd7e9d93a8159c720cab16e6382e3eb&sort_by=${sortBy}${voteAvg!==0 ? `&vote_average.lte=${voteAvg}` : ''}${year!==0 ? `&year=${year}` : ''}&page=${currentPage}`)
 
         console.log(rawData.data);
         

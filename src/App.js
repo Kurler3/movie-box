@@ -12,6 +12,7 @@ import LogIn from './components/Authentication/LogIn';
 import { AuthenticationProvider } from './context/AuthenticationContext';
 import GuestProfile from './components/Authentication/GuestProfile';
 import Discover from './components/SearchMovie/Discover';
+import SearchTitle from './components/SearchMovie/SearchTitle';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
                   <Route exact path="/log-in" component={LogIn} />
                   <Route exact path="/profile/guest" component={GuestProfile} />
                   <Route exact path="/discover" component={Discover} />
+                  <Route exact path="/search-results/:title" component={SearchTitle}/>
                 </Switch>
                 <Footer />
               </div>

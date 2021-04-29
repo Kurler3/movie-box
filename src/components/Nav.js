@@ -1,17 +1,34 @@
 import React, {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faHome, faUserCircle, faCompass, faSearch } from '@fortawesome/free-solid-svg-icons'
-import {Link} from 'react-router-dom'
+import {faHome, faUserCircle, faCompass, faSearch, faTv } from '@fortawesome/free-solid-svg-icons'
+import {Link, useHistory } from 'react-router-dom'
 import { AuthenticationConsumer } from '../context/AuthenticationContext'
 
-const Nav = () => {
+const Nav = (props) => {
 
     const [text, setText] = useState("");
+    const history = useHistory();
     
     function onChangeText(e) {
         setText(e.target.value)
     }
 
+
+    function submitHandler(event) {
+        event.preventDefault()
+
+        if(text!==''){
+            // If current location is searching a different title then just replace the pathname instead of pushing
+            if(history.location.pathname.includes('/search-results/')){
+                history.replace(`/search-results/${text}`)
+            }
+            else {
+                history.push(`search-results/${text}`)
+            }
+        }
+
+        setText('');
+    }
     return (
         <AuthenticationConsumer>
 
@@ -19,14 +36,16 @@ const Nav = () => {
                 return (
                 <div className="nav-bar">
                 <Link to="/" style={{textDecoration:'none'}}>
-                    <h1>Movie Box</h1>
+                    <h1><FontAwesomeIcon icon={faTv}/> Movie Box</h1>
                 </Link>
                 <div className="form-container">
-                    <form className="nav-bar-search-form">
+                    <form className="nav-bar-search-form" onSubmit={submitHandler}>
                         <input type="text" name="" id="" placeholder="Search..." className="nav-bar-search-form-input" value={text} 
                         onChange={onChangeText}/>
                         <button className="nav-bar-search-form-submit">
-                            <FontAwesomeIcon icon={faSearch} />
+                            {/* <Link to={`/search-results/${text}`} style={{textDecoration:'none'}} > */}
+                                <FontAwesomeIcon icon={faSearch} />
+                            {/* </Link> */}
                         </button>
                     </form>
                 </div>
