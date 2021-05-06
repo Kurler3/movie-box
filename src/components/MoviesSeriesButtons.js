@@ -5,16 +5,13 @@ const MoviesSeriesButtons = () => {
 
     return (
             <div className="movies-series-buttons-container">
-                <Link to="/" style={{textDecoration:'none'}}>
-                    <div className="movies-series-btn">
+                    <Link to="/" style={{textDecoration:'none', color:'white'}} className="movies-series-btn">
                         Movies
-                    </div>
-                </Link>
-                <Link to="/series" style={{textDecoration:'none'}}>
-                    <div className="movies-series-btn">
-                        TV shows
-                    </div>
-                </Link>
+                    </Link>
+
+                    <Link to="/series" style={{textDecoration:'none', color:'white'}} className="movies-series-btn">
+                            TV shows
+                    </Link> 
             </div>
     )
 }

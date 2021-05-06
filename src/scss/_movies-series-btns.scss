@@ -1,19 +1,23 @@
 .movies-series-buttons-container {
-    margin: 0 auto; 
-    width: 75%; 
+    margin: 20px auto;
+    width: 80%;
+    // background-color: red;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 5em 0 5em 0;
-
-
+    
     .movies-series-btn{
-        padding:0.7em 12em 0.7em 12em;
+        // padding:0.7em 12em 0.7em 12em;
+        padding:0.7em 0 0.7em 0;
         text-transform: uppercase;
         background: transparent;
         color: white;
         position: relative;
         letter-spacing: 1px;
+        width: 45%;
+        cursor: pointer;
+        text-align: center;
+        // background: red;
         
         &::before{
             content:"";
@@ -31,5 +35,7 @@
             -webkit-mask-composite: destination-out; /*5'*/
             mask-composite: exclude; /*5*/
         }
+
+
     }
 } 

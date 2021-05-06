@@ -6,8 +6,10 @@ import {CircleLoading} from 'react-loadingg';
 import LeftChevron from '../LeftChevron';
 import RightChevron from '../RightChevron';
 import NowPlayingMovie from './NowPlayingMovie';
+import useWindowDimensions from '../useWindowDimensions';
 
 const NowPlayingMovies = () => {
+    const { height, width } = useWindowDimensions();
     const [activeItemIndex, setActiveItemIndex] = useState(0);
     const [nowPlayingMovies, setNowPlayingMovies] = useState([]);
     const chevronWidth = 30;
@@ -45,7 +47,7 @@ const NowPlayingMovies = () => {
                             <ItemsCarousel
                             requestToChangeActive={setActiveItemIndex}
                             activeItemIndex={activeItemIndex}
-                            numberOfCards={7}
+                            numberOfCards={width / 182}
                             gutter={20}
                             leftChevron={<LeftChevron/>}
                             rightChevron={<RightChevron />}

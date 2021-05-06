@@ -58,6 +58,8 @@
   padding-left: 1em;
   color: white;
   cursor: pointer;
+  font-size: 1.5em;
+  width: 100%;
 }
 
 .nav-bar .form-container {
@@ -70,7 +72,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 500px;
+  width: 40%;
+  max-width: 500px;
 }
 
 .nav-bar .form-container .nav-bar-search-form {
@@ -133,6 +136,31 @@
   background: #191A19;
 }
 
+.nav-bar-menu-icon {
+  position: fixed;
+  right: 40px;
+  top: 20px;
+  color: white;
+  font-size: 2.5rem;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1060px) {
+  .nav-bar {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+  }
+  .nav-bar .form-container {
+    margin-left: 3em;
+  }
+}
+
 .latest-slider-container {
   height: 100vh;
   width: 100%;
@@ -172,8 +200,8 @@
 }
 
 .movies-series-buttons-container {
-  margin: 0 auto;
-  width: 75%;
+  margin: 20px auto;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,16 +210,18 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 5em 0 5em 0;
 }
 
 .movies-series-buttons-container .movies-series-btn {
-  padding: 0.7em 12em 0.7em 12em;
+  padding: 0.7em 0 0.7em 0;
   text-transform: uppercase;
   background: transparent;
   color: white;
   position: relative;
   letter-spacing: 1px;
+  width: 45%;
+  cursor: pointer;
+  text-align: center;
 }
 
 .movies-series-buttons-container .movies-series-btn::before {
@@ -447,6 +477,36 @@
   background: #262926;
 }
 
+@media screen and (max-width: 1000px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer-left-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer-left-container .footer-nav-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .details-container {
   background: #301739;
 }
@@ -539,19 +599,20 @@
 }
 
 .details-container-main-intro-like-container {
-  padding-left: 17em;
+  margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .details-container-main-intro-like-container .heart-icon {
+  margin-top: 20px;
   color: white;
   font-size: 2rem;
   cursor: pointer;
@@ -977,11 +1038,13 @@
 .discover-container-grid-container {
   margin-top: 20px;
   padding: 1em;
+  width: 80%;
   display: -ms-inline-grid;
   display: inline-grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-  grid-gap: 30px;
+  grid-column-gap: 5%;
+  grid-row-gap: 30px;
 }
 
 .discover-container-grid-container .discover-card {
@@ -1047,12 +1110,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30%;
+  width: 300px;
   padding: 1em;
 }
 
 .discover-container-page-changer-container-btn {
-  width: 45%;
+  width: 100px;
   padding-top: 0.6em;
   padding-bottom: 0.6em;
   background: #EB4E7A;
@@ -1065,6 +1128,20 @@
 .discover-container-page-changer-container-btn:hover {
   background: white;
   color: black;
+}
+
+@media screen and (max-width: 1076px) {
+  .discover-container-grid-container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .discover-container-grid-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .search-title-container {

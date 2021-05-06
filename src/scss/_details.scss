@@ -39,6 +39,7 @@
 
         &-intro {
             display: flex;
+            
 
             &-poster {
                 padding: 1em;
@@ -73,11 +74,13 @@
             }
 
             &-like-container {
-                padding-left: 17em;
+                // margin-left: 17em;
+                margin-left: 10px;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: center;
                 .heart-icon {
+                    margin-top: 20px;
                     color: white;
                     font-size: 2rem;
                     cursor: pointer;
